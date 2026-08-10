@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090709">
+<title>Meri Saannu — Your Little Corner of Music</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#060506;color:#eee5d7;font-family:"Space Mono",monospace;min-height:100vh;background-image:radial-gradient(circle at 50% 0%,#24101d 0,#090709 35%,#040304 100%)}button,a{font:inherit}button{cursor:pointer}.scanlines{position:fixed;inset:0;pointer-events:none;z-index:20;background:repeating-linear-gradient(0deg,rgba(255,255,255,.018) 0,rgba(255,255,255,.018) 1px,transparent 1px,transparent 4px);mix-blend-mode:screen}.wrap{width:min(1100px,94%);margin:auto}.topbar{display:flex;justify-content:space-between;gap:20px;padding:15px 2%;font-size:13px;color:#f0d4a0}.topbar span:first-child{color:#ff6b91}.topbar button{background:none;border:0;color:#f0d4a0}.brand{margin:12px 0 10px;padding:30px 20px;text-align:center;border:1px dashed #5a303b;border-radius:7px;display:flex;align-items:center;justify-content:center;gap:35px}.brand h1{font-family:"Press Start 2P",monospace;color:#ff4f82;font-size:42px;text-shadow:0 0 18px #ff2e6d;margin:0}.brand p{margin:16px 0 0;color:#e7d4b5}.notes{font-size:25px;color:#ff5b86}.brand>div:nth-child(3){display:none}nav{display:flex;justify-content:space-around;gap:5px;background:#080709;border-block:1px solid #241c1f;padding:14px;margin:8px 0}nav a{color:#e9d7b6;text-decoration:none;font-size:14px}nav a:hover{color:#ff4f82}.ticker{display:flex;justify-content:space-between;padding:11px 16px;border:1px solid #384057;color:#d6d0c6;font-size:13px;margin-bottom:20px}.online i{display:inline-block;width:10px;height:10px;background:#39e35a;border-radius:50%;margin-right:8px;box-shadow:0 0 10px #39e35a}.online b{color:#39e35a}.player{display:grid;grid-template-columns:42% 58%;border:1px solid #5a4540;border-radius:18px;overflow:hidden;background:rgba(5,4,6,.85);box-shadow:0 20px 60px rgba(0,0,0,.4)}.cover{min-height:470px;margin:18px;border-radius:10px;position:relative;overflow:hidden;background:linear-gradient(#29132f 0 45%,#b34a67 60%,#16121d 75%);border:2px solid #d7c7bc;box-shadow:inset 0 0 80px #100815}.moon{position:absolute;width:120px;height:120px;border-radius:50%;background:#ffd2a6;left:50%;top:22%;transform:translateX(-50%);box-shadow:0 0 35px #ffb17d}.city{position:absolute;inset:auto 0 0;height:38%;background:linear-gradient(155deg,transparent 0 35%,#09060b 36% 100%);clip-path:polygon(0 60%,15% 35%,25% 52%,37% 25%,48% 47%,60% 18%,75% 50%,88% 32%,100% 58%,100% 100%,0 100%)}.couple{position:absolute;bottom:20%;left:50%;transform:translateX(-50%);font-size:38px;letter-spacing:3px;text-align:center}.couple small{font-size:22px;color:#ff557f}.coverTitle{position:absolute;bottom:18px;left:18px;font-family:"Press Start 2P";font-size:13px;line-height:1.8;color:#fff1e3;text-shadow:2px 2px #24101d}.playerInfo{padding:48px 42px 30px}.eyebrow{color:#ff4f82;font-size:14px}.playerInfo h2{font-family:"Press Start 2P";font-size:25px;line-height:1.7;margin:20px 0 8px;color:#fff5df}.artist{font-size:18px;color:#ff557f}.meta{font-size:12px;color:#b9afa4;margin:15px 0 35px}.progressRow{display:grid;grid-template-columns:45px 1fr 45px;align-items:center;gap:10px;font-size:12px}input[type=range]{width:100%;accent-color:#ff557f}.controls{display:flex;align-items:center;justify-content:center;gap:22px;margin:28px 0}.controls button{border:1px solid #60493e;background:#090708;color:#f4ddba;border-radius:50%;width:58px;height:58px}.controls .play{width:68px;height:68px;background:#ff6689;border:0;color:#18060d;font-size:20px}.volume{display:flex;align-items:center;gap:10px}.hint{font-size:11px;color:#8f857d;line-height:1.7;margin-top:25px}.hint code{color:#ff8eaa}.panel{margin-top:20px;border:1px solid #5a4540;border-radius:12px;padding:0 20px 20px;background:#070607}.panel h3,.card h3{font-family:"Press Start 2P";font-size:15px;color:#ff557f;margin:0;padding:18px 0}.tableHead,.song{display:grid;grid-template-columns:35px 1fr 1fr 65px;gap:15px;align-items:center}.tableHead{padding:13px 8px;border-bottom:1px solid #46383b;font-size:11px;color:#a79d94}.song{padding:11px 8px;border-bottom:1px dashed #322a2c;font-size:12px}.song:hover,.song.active{background:#160c11;color:#ff6d91}.song button{background:none;border:0;color:inherit;text-align:left;padding:0}.actions{text-align:center;margin-top:20px}.actions button,.card button{background:none;border:0;color:#ff6b91}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.card{border:1px solid #4b3a39;border-radius:10px;padding:20px;min-height:220px;background:#080708}.card p{font-size:13px;line-height:1.8;color:#d2c6b6}.card strong{font-size:12px;color:#ff6b91}.equalizer{margin-top:30px;color:#ff4f82;letter-spacing:4px}.cassette{text-align:center;border:1px solid #6c4c51;padding:18px;margin-top:20px;color:#ff9aae;font-family:"Press Start 2P";font-size:10px;line-height:2.3}footer{text-align:center;border-top:1px solid #3b2d30;padding:25px 0 40px;color:#8f837c;font-size:11px}footer a{color:#ff6689;text-decoration:none}@media(max-width:760px){.topbar{font-size:9px}.brand{gap:5px}.brand h1{font-size:25px}.notes{display:none}.player{grid-template-columns:1fr}.cover{min-height:330px}.playerInfo{padding:30px 22px}.playerInfo h2{font-size:18px}.cards{grid-template-columns:1fr}.tableHead,.song{grid-template-columns:25px 1fr 60px}.tableHead span:nth-child(3),.song .artistCol{display:none}nav{flex-wrap:wrap}.ticker{font-size:10px}.online{display:none}}\n
+</style>
+</head>
+<body>
+<div class="scanlines"></div>
+<header class="topbar">
+  <span>♥ Welcome to Meri Saannu</span>
+  <span>|| Feel The Music, Feel The Love ||</span>
+  <button id="favBtn">☆ Add to Favorites</button>
+</header>
+
+<main class="wrap">
+  <section class="brand">
+    <div class="notes">♫ ♪ ♫</div>
+    <h1>Meri Saannu</h1>
+    <p>~ Your Little Corner Of Music ~</p>
+    <div class="notes">♪ ♫ ♪</div>
+  </section>
+
+  <nav>
+    <a href="#home">⌂ Home</a>
+    <a href="#playlist">♫ Playlist</a>
+    <a href="#dedications">♡ Dedications</a>
+    <a href="#about">★ About</a>
+    <a href="#contact">✉ Contact</a>
+  </nav>
+
+  <div class="ticker">
+    <span>♪ Music is the language of the heart... ♡</span>
+    <span class="online"><i></i><b id="onlineCount">32</b> People Online</span>
+  </div>
+
+  <section class="player" id="home">
+    <div class="cover">
+      <div class="moon"></div><div class="city"></div>
+      <div class="couple">●　●<br><small>♡</small></div>
+      <div class="coverTitle">MERI<br>SAANNU</div>
+    </div>
+
+    <div class="playerInfo">
+      <div class="eyebrow">••• NOW PLAYING •••</div>
+      <h2 id="title">Meri Saannu — Demo</h2>
+      <div class="artist" id="artist">Meri Saannu</div>
+      <div class="meta">Local audio • MP3 • 44.1 kHz</div>
+
+      <div class="progressRow">
+        <span id="current">00:00</span>
+        <input id="progress" type="range" min="0" max="100" value="0">
+        <span id="duration">00:00</span>
+      </div>
+
+      <div class="controls">
+        <button id="prev" aria-label="Previous">◀◀</button>
+        <button id="play" class="play" aria-label="Play">▶</button>
+        <button id="next" aria-label="Next">▶▶</button>
+        <button id="loop" aria-label="Loop">↻</button>
+        <button id="shuffle" aria-label="Shuffle">⤨</button>
+      </div>
+
+      <div class="volume">
+        <span>🔊</span>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value=".8">
+        <span id="volumePct">80%</span>
+      </div>
+
+      <audio id="audio" preload="metadata"></audio>
+      <p class="hint">Add your own MP3 files to <code>music/</code> and update the playlist in <code>script.js</code>.</p>
+    </div>
+  </section>
+
+  <section id="playlist" class="panel">
+    <h3>:: PLAYLIST ::</h3>
+    <div class="tableHead"><span>#</span><span>SONG TITLE</span><span>ARTIST</span><span>TIME</span></div>
+    <div id="songs"></div>
+    <div class="actions">
+      <button id="shuffleAll">[ Shuffle All ]</button>
+      <button id="downloadInfo">[ Add Your MP3s ]</button>
+    </div>
+  </section>
+
+  <section class="cards" id="about">
+    <article class="card">
+      <h3>♫ ABOUT MERI SAANNU</h3>
+      <p>A little corner made with love for music lovers. Plug in your headphones and escape the world.</p>
+      <strong>♥ Stay connected, stay musical.</strong>
+    </article>
+    <article class="card" id="dedications">
+      <h3>♡ DEDICATIONS</h3>
+      <p>Dedicate a song to someone special and make them smile :)</p>
+      <button onclick="alert('Dedications are ready for your custom form!')">Dedicate Now ✉</button>
+      <div class="equalizer">▁▃▅▇▅▃▁ ▂▄▆█▆▄▂ ▁▅▇▃▇▅▁</div>
+    </article>
+    <article class="card" id="contact">
+      <h3>★ SITE INFO</h3>
+      <p>♪ Your songs: <b id="songCount">0</b></p>
+      <p>♪ Plays: <b id="plays">0</b></p>
+      <p>♪ Made with ♥ for you</p>
+      <div class="cassette">▰ MERI SAANNU ▰<br>◉━━━━◉</div>
+    </article>
+  </section>
+
+  <footer>
+    <div>♡</div>
+    <p>© 2026 Meri Saannu — All Rights Reserved</p>
+    <p>Home　|　Playlist　|　Dedications　|　About　|　Contact　|　Privacy</p>
+    <a href="#">♥ Back to Top ↑</a>
+  </footer>
+</main>
+<script>
+const tracks=[
+ {title:"Meri Saannu — Demo",artist:"Meri Saannu",src:"music/song-01.mp3"},
+ {title:"Your First Song",artist:"Your Artist",src:"music/song-02.mp3"},
+ {title:"Dil Ki Baat",artist:"Your Artist",src:"music/song-03.mp3"},
+ {title:"Raaton Ka Safar",artist:"Your Artist",src:"music/song-04.mp3"},
+ {title:"Yaadon Mein",artist:"Your Artist",src:"music/song-05.mp3"}
+];
+
+const audio=document.getElementById("audio"), play=document.getElementById("play"), progress=document.getElementById("progress");
+const title=document.getElementById("title"), artist=document.getElementById("artist"), current=document.getElementById("current"), duration=document.getElementById("duration");
+const songs=document.getElementById("songs"), volume=document.getElementById("volume"), volumePct=document.getElementById("volumePct");
+let index=0, looping=false, plays=Number(localStorage.getItem("meriPlays")||0);
+
+function fmt(s){if(!Number.isFinite(s))return"00:00";return String(Math.floor(s/60)).padStart(2,"0")+":"+String(Math.floor(s%60)).padStart(2,"0")}
+function load(i,autoplay=false){index=(i+tracks.length)%tracks.length;const t=tracks[index];title.textContent=t.title;artist.textContent=t.artist;audio.src=t.src;render();if(autoplay)audio.play().catch(()=>{});}
+function render(){songs.innerHTML=tracks.map((t,i)=>`<div class="song ${i===index?"active":""}"><span>${i===index?"▶":String(i+1).padStart(2,"0")}</span><button onclick="load(${i},true)">${t.title}</button><span class="artistCol">${t.artist}</span><span>--:--</span></div>`).join("");document.getElementById("songCount").textContent=tracks.length}
+play.onclick=()=>{if(audio.paused){audio.play().catch(()=>alert("Add your MP3 files inside the music folder first."))}else audio.pause()};
+audio.onplay=()=>{play.textContent="Ⅱ";plays++;localStorage.setItem("meriPlays",plays);document.getElementById("plays").textContent=plays};
+audio.onpause=()=>play.textContent="▶";
+audio.ontimeupdate=()=>{current.textContent=fmt(audio.currentTime);progress.value=audio.duration?(audio.currentTime/audio.duration*100):0};
+audio.onloadedmetadata=()=>duration.textContent=fmt(audio.duration);
+progress.oninput=()=>{if(audio.duration)audio.currentTime=progress.value/100*audio.duration};
+volume.oninput=()=>{audio.volume=volume.value;volumePct.textContent=Math.round(volume.value*100)+"%"};
+document.getElementById("prev").onclick=()=>load(index-1,true);
+document.getElementById("next").onclick=()=>load(index+1,true);
+document.getElementById("loop").onclick=()=>{looping=!looping;audio.loop=looping;document.getElementById("loop").style.color=looping?"#ff557f":""};
+document.getElementById("shuffle").onclick=()=>load(Math.floor(Math.random()*tracks.length),true);
+document.getElementById("shuffleAll").onclick=()=>load(Math.floor(Math.random()*tracks.length),true);
+document.getElementById("favBtn").onclick=()=>{document.getElementById("favBtn").textContent="♥ Added to Favorites";localStorage.setItem("meriFav","1")};
+audio.onended=()=>{if(!looping)load(index+1,true)};
+load(0);audio.volume=.8;document.getElementById("plays").textContent=plays;
+document.getElementById("onlineCount").textContent=Math.floor(28+Math.random()*12);
+document.getElementById("downloadInfo").onclick=()=>alert("Put your legally owned/licensed MP3 files in the music folder and rename them song-01.mp3, song-02.mp3, etc.");
+
+</script>
+</body>
+</html>
